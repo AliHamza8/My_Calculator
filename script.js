@@ -16,51 +16,45 @@ newOp.type = 'text'
 newOp.dir = 'rtl'
 
 // Result
-btnResult.addEventListener('click', function() {
-    if(textbox.value >= 'a' && textbox.value <= 'z') {
-        alert('Please enter a number')
-        textbox.value = ''
-    }
-})
+// btnResult.addEventListener('click', function() {
+//     if(textbox.value >= 'a' && textbox.value <= 'z') {
+//         alert('Please enter a number')
+//         textbox.value = ''
+//     }
+// })
 
 // Operators
 btnDiv.addEventListener('click', function() {
-    newInput.value = btnDiv.textContent
-    sectionInput.appendChild(newInput)
-
     sectionInput.appendChild(newOp)
     newOp.value = btnDiv.textContent
+    sectionInput.appendChild(newInput)
+})
+btnMul.addEventListener('click', function() {
+    sectionInput.appendChild(newOp)
+    newOp.value = btnMul.textContent
+    sectionInput.appendChild(newInput)
+})
+btnMinus.addEventListener('click', function() {
+    sectionInput.appendChild(newOp)
+    newOp.value = btnMinus.textContent
+    sectionInput.appendChild(newInput)
+})
+btnAdd.addEventListener('click', function() {
+    sectionInput.appendChild(newOp)
+    newOp.value = btnAdd.textContent
+    sectionInput.appendChild(newInput)
 })
 
-// btnMul.addEventListener('click', function() {
-//     newInput.value = btnMul.textContent
-//     sectionInput.appendChild(newInput)
 
-//     sectionInput.appendChild(newOp)
-//     newOp.value = btnMul.textContent
-// })
-
-// btnMinus.addEventListener('click', function() {
-//     newInput.value = btnMinus.textContent
-//     sectionInput.appendChild(newInput)
-
-//     sectionInput.appendChild(newOp)
-//     newOp.value = btnMinus.textContent
-// })
-// btnAdd.addEventListener('click', function() {
-//     sectionInput.appendChild(newOp)
-//     newOp.value = btnAdd.textContent
-// })
 
 
 // Numbers
-numberBtn.forEach(button => {
-    button.addEventListener('click', function() {
-        textbox.value = button.textContent
-        newInput.value = btnAdd.textContent
-        sectionInput.appendChild(newInput)
-        newInput.value = button.textContent
-    })
-})
+// numberBtn.forEach(button => {
+//     button.addEventListener('click', function() {
+//         textbox.value = button.textContent
+//         newInput.value = btnAdd.textContent
+//         newInput.value = button.textContent
+//     })
+// })
 
 
